@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack -w",
+    "start": "nodemon ./server/index.js --watch"
   },
   "babel": {
     "presets": [
@@ -35,6 +36,8 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   }
