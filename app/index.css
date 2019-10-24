@@ -1,3 +1,44 @@
-body {
-    background: green;
+html, body {
+  height: 100%;
+  background-color: #ddeefc;
 }
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container {
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > div {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  /* line-height: 75px; */
+}
+
+.card {
+  border: 1px solid black;
+  height: 33%;
+}
+.form {
+  height:66%;
+  border: 1px solid black;
+}
+
+
+
+

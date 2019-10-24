@@ -15,9 +15,35 @@ export default class Form extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>hi</h1>
+      <div class='container'>
+
+          <div class='card'>
+            CARD
+          </div>
+          <div class='form'>
+            <form>
+              <label>
+                Card Number:
+                <input type="number" />
+              </label>
+              <label>
+                Card Name:
+                <input type="text" />
+              </label>
+              <label>
+                Expiration Date:
+                <input type="number" />
+              </label>
+                <input type="number" />
+              <label>
+                CVV:
+                <input type="number" />
+              </label>
+            </form>
+          </div>
+
       </div>
+       
     )
   }
 }
