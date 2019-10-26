@@ -13,35 +13,40 @@ export default class Form extends React.Component {
     }
   }
 
+  handleChange(event) {
+    this.setState()
+  }
+
   render() {
     return(
       <div class='container'>
-
-          <div class='card'>
-            CARD
-          </div>
-          <div class='form'>
-            <form>
-              <label>
-                Card Number:
-                <input type="number" />
-              </label>
-              <label>
-                Card Name:
-                <input type="text" />
-              </label>
-              <label>
-                Expiration Date:
-                <input type="number" />
-              </label>
-                <input type="number" />
-              <label>
-                CVV:
-                <input type="number" />
-              </label>
-            </form>
-          </div>
-
+        <div class='card'>
+          CARD
+        </div>
+        <div class='formContainer'>
+          <form className='form'>
+            <label>
+              Card Number:
+              <input type='number' className='number'/>
+            </label>
+            <label>
+              Card Name:
+              <input type='text' className='name'/>
+            </label>
+            <label>
+              Expiration Date:
+              <input type='number' className='month'/>
+            </label>
+              <input type='number' className='year'/>
+            <label>
+              CVV:
+              <input type='number' className='cvv'/>
+            </label>
+            <fieldset className='button'>
+            <input type='submit' className='submit' maxLength='500'/>
+            </fieldset>
+          </form>
+        </div>
       </div>
        
     )

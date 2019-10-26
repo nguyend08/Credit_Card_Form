@@ -17,7 +17,6 @@ html, body {
   background-color: white;
   width: 50%;
   height: 50%;
-  border: 1px solid black;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -31,12 +30,58 @@ html, body {
 }
 
 .card {
-  border: 1px solid black;
   height: 33%;
 }
-.form {
+
+
+.formContainer {
   height:66%;
-  border: 1px solid black;
+}
+
+.form  {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+    "number number number number"
+    "name name name name"
+    "month year . cvv"
+    "button button button button";
+  border: 5px purple solid;
+  height: 100%;
+}
+
+.number {
+  grid-area: number;
+}
+
+.name {
+  grid-area: name;
+
+}
+
+.month {
+  grid-area: expiration;
+}
+
+.year {
+  grid-area: year;
+}
+
+.cvv {
+  grid-area: cvv;
+
+}
+
+.button {
+  grid-area: button;
+}
+
+.submit {
+  background-color: #00BFFF;
+  font-weight: bold;
+  padding: 12px 15px;
+  color: #ffffff;
 }
 
 
