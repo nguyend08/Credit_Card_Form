@@ -25,23 +25,36 @@ export default class Form extends React.Component {
         </div>
         <div class='formContainer'>
           <form className='form'>
+          <fieldset id="number">
             <label>
               Card Number:
-              <input type='number' className='number'/>
+              <input type='number' className='numberBar'/>
             </label>
+          </fieldset>
+          <fieldset id="name">
             <label>
               Card Name:
-              <input type='text' className='name'/>
+              <input type='text' className='nameBar'/>
             </label>
+          </fieldset>
+          <fieldset id="month">
             <label>
-              Expiration Date:
-              <input type='number' className='month'/>
+              Month:
+              <input type='number' className='monthBar'/>
             </label>
-              <input type='number' className='year'/>
+          </fieldset>
+          <fieldset id="year">
+            <label>
+              Year:
+              <input type='number' className='yearBar'/>
+            </label> 
+          </fieldset>
+          <fieldset id="cvv">
             <label>
               CVV:
-              <input type='number' className='cvv'/>
+              <input type='number' className='cvvBar'/>
             </label>
+          </fieldset>
             <fieldset className='button'>
             <input type='submit' className='submit' maxLength='500'/>
             </fieldset>
