@@ -16,7 +16,7 @@ html, body {
 .container {
   background-color: white;
   width: 50%;
-  height: 50%;
+  height: 75%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -106,10 +106,11 @@ html, body {
 select {
   width: 100%;
   padding: 5px 80px 5px 5px;
-  height: 60%;
+  height: 64%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-radius: 5px
   /* background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #EEE; */
 }
 
