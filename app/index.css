@@ -17,19 +17,19 @@ html, body {
   background-color: white;
   width: 50%;
   height: 50%;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
 
 .container > div {
   width: 100%;
-  text-align: center;
   /* line-height: 75px; */
 }
 
 .card {
   height: 33%;
+  text-align: center;
 }
 
 
@@ -49,42 +49,90 @@ html, body {
   height: 100%;
 }
 
-.form label {
+
+.numberBar {
   display: block;
+  width: 97%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+.nameBar {
+  display: block;
+  width: 97%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+.monthBar {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.yearBar {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cvvBar {
+  display: block;
+  width: 91%;  
+  height: 55%;
+  border-radius: 5px;
 }
 
 #number {
   grid-area: number;
+  border: 0;
 }
 
 #name {
   grid-area: name;
-
+  border: 0;
 }
 
 #month {
   grid-area: month;
+  border: 0;
 }
 
 #year {
   grid-area: year;
+  border: 0;
 }
+
+select {
+  width: 100%;
+  padding: 5px 80px 5px 5px;
+  height: 60%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #EEE; */
+}
+
 
 #cvv {
   grid-area: cvv;
-
+  border: 0;
 }
 
 #button {
   grid-area: button;
+  display:grid;
+  height: 100%;
+  border: 0;
 }
 
 .submit {
   background-color: #00BFFF;
   font-weight: bold;
-  padding: 15px 150px;
+  padding: 15px 180px;
   color: #ffffff;
-  border-radius: 20px;
+  border-radius: 5px;
+  margin: auto;
 }
 
 

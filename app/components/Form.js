@@ -14,7 +14,6 @@ export default class Form extends React.Component {
       }
     }
     this.handleChange = this.handleChange.bind(this);
-    this.invalidMsg = this.invalidMsg.bind(this);
   }
 
   handleChange(e) {
@@ -48,19 +47,19 @@ export default class Form extends React.Component {
           <form className='form'>
             <fieldset id="number">
               <label>
-                Card Number:
+                Card Number
                 <input type='text' className='numberBar' name='number' value={fields.number} onChange={this.handleChange} pattern='^[0-9]{16}$' title='Input Full Credit Card Number'/>
               </label>
             </fieldset>
             <fieldset id="name">
               <label>
-                Card Name:
-                <input type='text' className='nameBar' name='name' value={fields.name} onChange={this.handleChange} pattern='[A-Za-z]+' title='Input Only Alphabetic Characters'/>
+                Card Name
+                <input type='text' className='nameBar' name='name' value={fields.name} onChange={this.handleChange} pattern='[a-zA-Z ]*$' title='Input Only Alphabetic Characters'/>
               </label>
             </fieldset>
             <fieldset id="month">
               <label>
-                Month:
+                Month
                 <select className='monthBar' name='month' value={fields.month} onChange={this.handleChange} placeholder='Month' required title='Please Select A Month'> 
                   <option value='' disabled selected>Month</option>
                   <option value='01'>01</option>
@@ -80,7 +79,7 @@ export default class Form extends React.Component {
             </fieldset>
             <fieldset id="year">
               <label>
-                Year:
+                Year
                 <select className='yearBar' name='year' value={fields.year} onChange={this.handleChange} placeholder='Year' required>
                   <option value='' disabled selected>Year</option>
                   <option value='2019'>2019</option>
@@ -100,12 +99,12 @@ export default class Form extends React.Component {
             </fieldset>
             <fieldset id="cvv">
               <label>
-                CVV:
+                CVV
                 <input type='text' className='cvvBar' name='cvv' value={fields.cvv} onChange={this.handleChange}/>
               </label>
             </fieldset>
               <fieldset id='button'>
-              <input type='submit' className='submit' maxLength='500'/>
+                <input type='submit' className='submit' maxLength='500'/>
               </fieldset>
           </form>
         </div>
