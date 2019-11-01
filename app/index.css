@@ -16,7 +16,7 @@ html, body {
 .container {
   background-color: white;
   width: 50%;
-  height: 75%;
+  height: 50%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -27,9 +27,23 @@ html, body {
   /* line-height: 75px; */
 }
 
-.card {
+.cardContainer {
   height: 33%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 130%;
+  width: 75%;
+  margin-bottom: 140px;
+  background-image: url("http://media.pennlive.com/food/photo/guy-fieri-d8c9539ebf1d3851.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 10px;
 }
 
 
