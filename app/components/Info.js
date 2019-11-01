@@ -46,7 +46,7 @@ export default function Info(props) {
               required
               title="Please Select A Month"
             >
-              <option value="" disabled selected>
+              <option value='' disabled selected>
                 Month
               </option>
               <option value="01">01</option>

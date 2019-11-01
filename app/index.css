@@ -44,6 +44,53 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
   border-radius: 10px;
+  
+}
+
+.front-card {
+  display: grid;
+  grid-template-areas: 
+    "card-chip . . card-type"
+    "card-number card-number card-number card-number"
+    "card-holder card-holder . expires";
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  height: 100%;
+  color: white;
+}
+
+.chip {
+  width: 50%
+}
+
+.type {
+  width:50%;
+  float: right;
+}
+
+#card-chip {
+  grid-area: card-chip;
+  border: 0;
+}
+
+#card-type {
+  grid-area: card-type;
+  border: 0;
+}
+
+#card-number {
+  grid-area: card-number;
+  border: 0;
+}
+
+#card-holder {
+  grid-area: card-holder;
+  border: 0;
+}
+
+#expires {
+  grid-area: expires;
+  border: 0;
 }
 
 
@@ -148,6 +195,7 @@ select {
   color: #ffffff;
   border-radius: 5px;
   margin: auto;
+  font-size: 15px;
 }
 
 

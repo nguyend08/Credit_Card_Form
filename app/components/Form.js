@@ -10,8 +10,8 @@ export default class Form extends React.Component {
       fields: {
         number: "",
         name: "",
-        month: "",
-        year: "",
+        month: "MM",
+        year: "YY",
         cvv: ""
       }
     };
