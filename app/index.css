@@ -52,47 +52,60 @@ html, body {
   grid-template-areas: 
     "card-chip . . card-type"
     "card-number card-number card-number card-number"
-    "card-holder card-holder . expires";
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto;
+    "card-holder card-holder card-holder card-expires";
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 33% 33% 33%;
   height: 100%;
   color: white;
 }
 
+
 .chip {
-  width: 50%
+  width: 100%;
 }
 
 .type {
-  width:50%;
+  width: 100%;
   float: right;
+}
+
+.number {
+  width: 100%;
+}
+
+.holder {
+  width: 100%;
+}
+
+.expires {
+  width: 100%;
 }
 
 #card-chip {
   grid-area: card-chip;
-  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #card-type {
   grid-area: card-type;
-  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #card-number {
   grid-area: card-number;
-  border: 0;
 }
 
 #card-holder {
   grid-area: card-holder;
-  border: 0;
 }
 
-#expires {
-  grid-area: expires;
-  border: 0;
+#card-expires {
+  grid-area: card-expires;
 }
-
 
 .formContainer {
   height:66%;
@@ -144,22 +157,22 @@ html, body {
   border-radius: 5px;
 }
 
-#number {
+#form-number {
   grid-area: number;
   border: 0;
 }
 
-#name {
+#form-name {
   grid-area: name;
   border: 0;
 }
 
-#month {
+#form-month {
   grid-area: month;
   border: 0;
 }
 
-#year {
+#form-year {
   grid-area: year;
   border: 0;
 }
@@ -176,7 +189,7 @@ select {
 }
 
 
-#cvv {
+#form-cvv {
   grid-area: cvv;
   border: 0;
 }

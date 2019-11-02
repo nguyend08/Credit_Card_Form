@@ -6,7 +6,7 @@ export default function Info(props) {
   return (
     <div class="formContainer">
       <form className="form">
-        <fieldset id="number">
+        <fieldset id="form-number">
           <label>
             Card Number
             <input
@@ -20,7 +20,7 @@ export default function Info(props) {
             />
           </label>
         </fieldset>
-        <fieldset id="name">
+        <fieldset id="form-name">
           <label>
             Card Name
             <input
@@ -34,7 +34,7 @@ export default function Info(props) {
             />
           </label>
         </fieldset>
-        <fieldset id="month">
+        <fieldset id="form-month">
           <label>
             Month
             <select
@@ -64,7 +64,7 @@ export default function Info(props) {
             </select>
           </label>
         </fieldset>
-        <fieldset id="year">
+        <fieldset id="form-year">
           <label>
             Year
             <select
@@ -93,7 +93,7 @@ export default function Info(props) {
             </select>
           </label>
         </fieldset>
-        <fieldset id="cvv">
+        <fieldset id="form-cvv">
           <label>
             CVV
             <input
