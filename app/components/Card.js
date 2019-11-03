@@ -59,7 +59,19 @@ export default class Card extends React.Component {
       <div class="cardContainer">
         <div class="card">
           <div class={`back-card ${flippedCSS}`}>
-            <h1>Hi</h1>
+            <fieldset id='bar-back'>
+              <div class='bar'></div>
+            </fieldset>
+            <fieldset id='cvv-back'>
+              <p>CVV</p>
+              <div>{fields.cvv}</div>
+            </fieldset>
+            <fieldset id="card-type">
+                <img
+                  src="https://bestofcategoryreviews.com/wp-content/uploads/2016/01/Visa-symbol.jpg"
+                  className="type"
+                />
+            </fieldset>
           </div>
         </div>
       </div>

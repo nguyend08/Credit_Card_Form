@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Info(props) {
   const { fields, handleChange } = props;
-
+  
   return (
     <div class="formContainer">
       <form className="form">
