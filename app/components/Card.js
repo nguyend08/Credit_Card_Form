@@ -4,22 +4,12 @@ export default class Card extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      flipped: false,
-      clicked: false
-    };
   }
 
-  flip() {
-    this.setState({
-      flipped: !this.state.flipped,
-      clicked: true
-    });
-  }
+  
 
   render() {
-    const { fields } = this.props;
-    const { flipped, clicked } = this.state;
+    const { fields, flipped, clicked  } = this.props;
     const flippedCSS = flipped ? "card-back-flip" : "card-front-flip";
 
     if (flippedCSS === "card-front-flip") {

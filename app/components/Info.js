@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function Info(props) {
-  const { fields, handleChange } = props;
-  
+  const { fields, handleChange, flip, unflip } = props;
+
   return (
     <div class="formContainer">
       <form className="form">
@@ -17,6 +17,8 @@ export default function Info(props) {
               onChange={handleChange}
               pattern="^[0-9]{16}$"
               title="Input Full Credit Card Number"
+              maxLength="16"
+              onClick={unflip}
             />
           </label>
         </fieldset>
@@ -31,6 +33,8 @@ export default function Info(props) {
               onChange={handleChange}
               pattern="[a-zA-Z ]*$"
               title="Input Only Alphabetic Characters"
+              maxLength="35"
+              onClick={unflip}
             />
           </label>
         </fieldset>
@@ -45,6 +49,7 @@ export default function Info(props) {
               placeholder="Month"
               required
               title="Please Select A Month"
+              onClick={unflip}
             >
               <option value='' disabled selected>
                 Month
@@ -74,6 +79,7 @@ export default function Info(props) {
               onChange={handleChange}
               placeholder="Year"
               required
+              onClick={unflip}
             >
               <option value="" disabled selected>
                 Year
@@ -104,6 +110,8 @@ export default function Info(props) {
               onChange={handleChange}
               pattern="^[0-9]{3}$"
               title="Input Numeric Values Only"
+              maxLength="3"
+              onClick={flip}
             />
           </label>
         </fieldset>
