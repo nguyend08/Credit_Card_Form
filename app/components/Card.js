@@ -5,7 +5,7 @@ export default class Card extends React.Component {
     super(props);
 
     this.state = {
-      flipped: true,
+      flipped: false,
       clicked: false
     };
   }
@@ -43,9 +43,11 @@ export default class Card extends React.Component {
                 <div className="number">{fields.number}</div>
               </fieldset>
               <fieldset id="card-holder">
+                <div class='info'>Card Holder</div>
                 <div className="holder">{fields.name}</div>
               </fieldset>
               <fieldset id="card-expires">
+                <div class='info'>Expires</div>
                 <div className="expires">
                   {fields.month}/{fields.year}
                 </div>
@@ -55,27 +57,27 @@ export default class Card extends React.Component {
         </div>
       );
     } else {
-      return(
-      <div class="cardContainer">
-        <div class="card">
-          <div class={`back-card ${flippedCSS}`}>
-            <fieldset id='bar-back'>
-              <div class='bar'></div>
-            </fieldset>
-            <fieldset id='cvv-back'>
-              <p>CVV</p>
-              <div>{fields.cvv}</div>
-            </fieldset>
-            <fieldset id="card-type">
+      return (
+        <div class="cardContainer">
+          <div class="card">
+            <div class={`back-card ${flippedCSS}`}>
+              <fieldset id="bar-back">
+                <div class="bar"></div>
+              </fieldset>
+              <fieldset id="cvv-back">
+                <div class="cvv-back-title info">CVV</div>
+                <div class="cvv-back-input-box">{fields.cvv}</div>
+              </fieldset>
+              <fieldset id="card-type">
                 <img
                   src="https://bestofcategoryreviews.com/wp-content/uploads/2016/01/Visa-symbol.jpg"
                   className="type"
                 />
-            </fieldset>
+              </fieldset>
+            </div>
           </div>
         </div>
-      </div>
-      )
+      );
     }
   }
 }

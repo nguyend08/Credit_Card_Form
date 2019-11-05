@@ -47,6 +47,12 @@ html, body {
   
 }
 
+.info {
+  font-size: 12px;
+  color: #A9A9A9;
+  font-weight:bold
+}
+
 .front-card {
   display: grid;
   grid-template-areas: 
@@ -61,7 +67,8 @@ html, body {
 
 
 .chip {
-  width: 100%;
+  margin-top: 10px;
+  width: 80%;
 }
 
 .type {
@@ -71,40 +78,42 @@ html, body {
 
 .number {
   width: 100%;
+  line-height: 50px;
 }
 
 .holder {
+  padding-top: 5px;
   width: 100%;
 }
 
 .expires {
   width: 100%;
+  padding-top: 5px;
 }
 
 #card-chip {
   grid-area: card-chip;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border:0;
 }
 
 #card-type {
   grid-area: card-type;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 0;
 }
 
 #card-number {
   grid-area: card-number;
+  border:0;
 }
 
 #card-holder {
   grid-area: card-holder;
+  border:0;
 }
 
 #card-expires {
   grid-area: card-expires;
+  border:0;
 }
 
 .back-card {
@@ -116,22 +125,43 @@ html, body {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 33% 33% 33%;
   height: 100%;
+  width: 100%;
   color: white;
 }
 
 #bar-back {
   grid-area: bar-back;
-  /* background-color: black; */
+  background-color: black;
+  width: auto;
+  height: 40%;
+ border: 0;
+ margin-top: 20px;
 }
 
 #cvv-back {
   grid-area: cvv-back;
+  border: 0;
 }
 
-.bar {
-  background-color: black;
+.cvv-back-title {
+  float: right;
+}
+
+.cvv-back-input-box {
+  background-color: white;
   width: 100%;
-  height: 75%;
+  height: 80%;
+  line-height: 45px;
+  margin-top: 20px;
+  color: black;
+  border-radius: 5px;
+  text-align: right;
+
+}
+
+
+#card-type > img {
+  margin-top: 15px;
 }
 
 .formContainer {
