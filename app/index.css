@@ -22,16 +22,19 @@ html, body {
   flex-direction: column;
 }
 
-.container > div {
+/* .container > div {
   width: 100%;
-  /* line-height: 75px; */
-}
+} */
 
-.cardContainer {
-  height: 33%;
+.cardContainer, .cardContainerflipped {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .card {
@@ -44,8 +47,36 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
   border-radius: 10px;
-  
+  transform-style: preserve-3d;
+  transition: all .5s linear;
 }
+
+.cardContainerflipped .card {
+  transform: rotateY(180deg);
+}
+
+.cardContainerflipped > .card > .front-card {
+  /* opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in, visibility .75s linear;   */
+}
+
+/* .back-card {
+  width: 100%;
+  height: 100%; 
+  z-index: 2;
+  transform: rotateY(180deg)
+} */
+
+.card-side {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+ }
 
 .info {
   font-size: 12px;
@@ -63,6 +94,7 @@ html, body {
   grid-template-rows: 33% 33% 33%;
   height: 100%;
   color: white;
+
 }
 
 
@@ -127,6 +159,8 @@ html, body {
   height: 100%;
   width: 100%;
   color: white;
+  z-index: 2;
+  transform: rotateY(180deg)
 }
 
 #bar-back {
@@ -134,8 +168,8 @@ html, body {
   background-color: black;
   width: auto;
   height: 40%;
- border: 0;
- margin-top: 20px;
+  border: 0;
+  margin-top: 20px;
 }
 
 #cvv-back {
@@ -267,6 +301,8 @@ select {
   margin: auto;
   font-size: 15px;
 }
+
+
 
 
 
