@@ -51,7 +51,7 @@ export default function Info(props) {
               title="Please Select A Month"
               onClick={unflip}
             >
-              <option value='' disabled selected>
+              <option value='MM' disabled selected>
                 Month
               </option>
               <option value="01">01</option>
@@ -81,7 +81,7 @@ export default function Info(props) {
               required
               onClick={unflip}
             >
-              <option value="" disabled selected>
+              <option value="YY" disabled selected>
                 Year
               </option>
               <option value="2019">2019</option>
